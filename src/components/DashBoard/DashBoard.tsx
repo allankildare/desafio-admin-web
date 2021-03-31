@@ -49,7 +49,7 @@ function Dashboard() {
                 <FlexLinks>
                     <Link to="/users">Usuários</Link>
                     <Link to="/cards">Cartões</Link>
-                    <Link to="/Audits">Auditorias</Link>
+                    <Link to="/audits">Auditorias</Link>
                 </FlexLinks>
             </DashboardContainer>
         </>
