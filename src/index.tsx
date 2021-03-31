@@ -1,13 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { UserProvider } from './context'
+import Header from './components/Header/Header'
+import Users from './components/Users/Users'
+import Cards from './components/Cards/Cards'
+import Audits from './components/Audits/Audits'
+import Dashboard from './components/DashBoard/DashBoard'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <UserProvider>
+      <Switch>
+        <Route exact path="/">
+          <App />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
+        <Route path="/users">
+          <Header />
+          <Users />
+        </Route>
+        <Route path="/cards">
+          <Header />
+          <Cards />
+        </Route>
+        <Route path="/audits">
+          <Header />
+          <Audits />
+        </Route>
+      </Switch>
+      </UserProvider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
