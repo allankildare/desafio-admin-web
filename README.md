@@ -1,33 +1,31 @@
-<p align="center">
-  <strong>Desafio Admin-web</strong><br>
-  <br>
-</p>
+# Realização do desafio Stone para Desenvolvedor Front-end
+**[Desafio técnico 🔗](https://desafio-frontend-stone-kildare.herokuapp.com/)**
 
-Que tal ser desafiado pela Stone?
+Durante 2 semanas tive a oportunidade de desenvolver uma aplicação front-end como desafio técnico para a [Stone](https://www.stone.com.br/), foram diversos momentos desafiadores e muito aprendizado na jornada, pude abordar bastante coisa e trabalhar com o que amo usar.
 
-O seu desafio será construir uma aplicação de gestão financeira para o mundo dos negócios de uma nova empresa que está em constante crescimento. Voce terá o papel de ajudar a alavancar os negócios dessa empresa. Um nome bem legal para ela ficará a seu critério, mas ao longo do texto a chamaremos de **Rocha Incrível**.
+As tecnologidas envolvidas foram:
+- React
+- react-router-dom
+- styled-components
+- TypeScript
+- CSS (Flexbox e Grid)
 
-A Rocha terá você como desenvolvedor responsável pelas novas funcionalidades que a mesma deverá soltar no mercado ainda este ano. A empresa tem usuários em sua base de dados e agora vai começar a oferecer cartão de crédito para eles. A Rocha conta com times que fazem a análise dos usuários para a liberação do cartão de crédito, mas o sistema que automatizará todo o processo ainda não existe. Os nossos futuros clientes, os análistas, usam uma planilha para controle interno. Essa planilha controla os cartoes "Solicitados", "Aprovados", "Rejeitados" e,  também é utilizada para auditoria das ações dos próprios analistas.
+Infelizmente nas duas semanas disponíveis tive um problema com o tempo, mas consegui superar e entregar o desafio da melhor forma possível, adaptando ao tempo que tive. Mesmo assim o resultado foi bem satisfatório e pude colher diversos frutos nessa jornada. Independente do resultado é um projeto que seguirei melhorando para chegar no resultado que almejo.
 
-Precisamos que a nossa aplicação de gestão seja capaz de fornecer aos nossos analistas as informações necessárias sobre os usuários da base e as solicitações de cartão. A plataforma deverá fornecer ao operador (Analista) meios de **aprovar**, **rejeitar** ou **excluir** os pedidos de cartão e de acompanhar o histórico das acoes que foram executadas.
-
-Os operadores trabalham em 2 times diferentes, time n1 e n2. Para isso a API disponibiliza os roles de acesso para cada analista cadastrado, dessa forma será possível exibir somente informações relevantes para cada time e manter a segurança da informação.
-
-Lembre-se que o time de back-end já criou uma API que fornecerá as informações necessárias para todo o desenvolvimento.
-
-## Desafio
+O deploy foi feito e pode ser visualizado [clicando aqui](https://desafio-frontend-stone-kildare.herokuapp.com/).
+## Qual o desafio?
 Alguns pontos foram enumerados para que consigamos fornecer ao nosso operador um sistema robusto de administração de Cartao de crédito.
 
 ### Parte 1 - O Analista deve ser capaz de:
 > Recursos do contexto **users**, **cards**, **audits**
 
-1. **Visualizar** usuários da base.
+1. **Visualizar** usuários da base. ✔️
   - GET http://localhost:3001/users
-2. **Visualizar** cartoes disponíveis.
+2. **Visualizar** cartoes disponíveis. ✔️
   - GET http://localhost:3001/cards
-3. **Visualizar** Auditoria. Esta deve conter o histórico de ações do operador (Item 4).
+3. **Visualizar** Auditoria. Esta deve conter o histórico de ações do operador (Item 4). ✔️
   - GET http://localhost:3001/audits
-4. **Aprovar**, **rejeitar** um pedido de cartão. Essas acoes alteram somente o status do pedido e devem gerar logs em auditoria. O status inicial de um pedido é "requested", mas pode ser alterado para "approved" ou "rejected".
+4. **Aprovar**, **rejeitar** um pedido de cartão. Essas acoes alteram somente o status do pedido e devem gerar logs em auditoria. O status inicial de um pedido é "requested", mas pode ser alterado para "approved" ou "rejected". ✔️
   - PUT http://localhost:3001/cards/:id
   - POST http://localhost:3001/audits
  
@@ -37,7 +35,7 @@ Alguns pontos foram enumerados para que consigamos fornecer ao nosso operador um
 > Recursos do contexto **features**, **analysts**
 
 1. **Entrar** na aplicacao com email e senha. Utilizar a rota "/analysts" como auxílio e fazer a validação direto no client, ou seja a sessao do usuário deverá ser implementada no front e pode seguir um caminho simples sem problemas. A tela de login deverá conter os campos email e senha.
- - GET http://localhost:3001/analysts
+ - GET http://localhost:3001/analysts ✔️
 2. **Excluir** e **Criar** um pedido de cartão. A acao de excluir, remove um elemento por inteiro e a de criar, gera um novo pedido de cartao com status "requested. Um cartao só pode ser criado para usuários que tenham "card" em enabledFeatures. A rota "/features" pode ser utilizada como auxilio para entender cada enabledFeatures do usuário.
  - POST http://localhost:3001/cards
  - DELETE http://localhost:3001/cards/:id
@@ -234,6 +232,3 @@ Fique à vontade para definir seu próprio layout. Mas vamos deixar algumas dica
 - [REST](https://pt.wikipedia.org/wiki/REST)
 - [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 
-
-
-Tenha um bom desafio.
